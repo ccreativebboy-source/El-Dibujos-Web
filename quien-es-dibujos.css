@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+}
+
+body {
+    background-image: url('src/img/background.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: grid;
+    place-items: center;
+
+    display: flex;
+    justify-content: center;
+    image-rendering: pixelated;
+    cursor: default;
+}
+
+.CajaQuienEs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px;
+    border-radius: 30px 30px 30px 30px;
+    width: 850px;
+}
+
+.cajaHeader {
+    width: 100%;
+    display: flex;
+}
+
+.CajaRegreso {
+    border-left: 3px solid #ff9640 ;
+    border-right: 3px solid #ff9640 ;
+    background: linear-gradient(to bottom, #ff9640,#db3b3b);
+    height: 50px;
+    border-radius: 25px 10px 0px 00px;
+    position: relative;
+    z-index: 2;
+    right: 2px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CajaRegreso a {
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    text-shadow: 0px 2px 0px #883912;
+}
+
+.Decoracion1 {
+    margin-left: -25px;
+    position: relative;
+    z-index: 1;
+    height: 35px;
+    display: flex;
+    margin-top: 15px;
+    border-radius: 25px 10px 0px 00px;
+    width: 200px;
+    background: linear-gradient(to bottom, #c5712c,#a32222);
+}
+
+.CajaMain {
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 850px;
+    border: 3px solid #f7e891 ;
+    background: linear-gradient(to bottom, #f7e891,#d0db3b );
+    border-radius: 0px 30px 30px 30px;
+}

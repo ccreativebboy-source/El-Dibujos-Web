@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:cursive;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('src/img/background0.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: grid;
+    place-items: center;
+    image-rendering: pixelated;
+    cursor: default;
+}
+
+.auto {
+    transform: translate(-155px, 3px);
+}
+
+.auto:hover {
+    filter: drop-shadow(0px 0px 5px #ffffbc) brightness(1.2);
+}
+
+main {
+    display: flex;
+    align-items: flex-end; /* Alinea todos los elementos por la base (el suelo) */
+    justify-content: center;
+    gap: 30px; /* Separa el auto, la casa y el buzón sin que se toquen */
+    transform: translateY(-75px); /* Sube toda la escena junta sin desordenarla */
+}
+
+/* Contenedor de la casa */
+.casa {
+    position: relative;
+    display: inline-block;
+    transform: translate(-123px);
+}
+
+/* La primera imagen NO lleva position: absolute para darle tamaño real al contenedor */
+.casa img:first-child {
+    display: block;
+    object-fit: contain;
+}
+
+/* Solo la segunda imagen se superpone exactamente encima de la primera */
+.casa .img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    object-fit: contain;
+    opacity: 0;
+}
+
+/* Al pasar el mouse por la casa, aparece la segunda imagen */
+.casa:hover .img-hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px #ffffbc) brightness(1.2);
+}
+
+
+.Buzon {
+    transform: translate(-95px, 2px);
+}
+
+.Buzon:hover {
+    filter: drop-shadow(0px 0px 5px #ffffbc) brightness(1.2);
+}
