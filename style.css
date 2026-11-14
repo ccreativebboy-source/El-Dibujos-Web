@@ -114,7 +114,7 @@ option {
     border: 3px solid #9b91f7;
     border-radius: 10px;
     padding: 17px;
-    box-shadow: 0px 5px 0px 0px rgba(5, 5, 5, 0.432);
+    box-shadow: 0px 5px 5px 0px #1d097565;
 }
 
 .mainPrincipal section header{
@@ -143,9 +143,13 @@ option {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0px 0px 30px 30px;
-    border: 3px solid #ff9640;
-    border-top: 2px solid black;
-    background: linear-gradient(to bottom, #ff9640,#db3b3b );
+
+     border: 3px solid transparent;
+
+  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
+    background: 
+        linear-gradient(to bottom, #ff9640, #db3b3b) padding-box,
+        linear-gradient(to bottom, #ffebaa 0%, #ff9640 25%) border-box;
 }
 
 .footerPrincipal a{
