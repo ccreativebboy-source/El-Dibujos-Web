@@ -4,6 +4,11 @@
     font-family:cursive;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-image: url('src/img/background.gif');
     background-size: cover;
@@ -17,6 +22,10 @@ body {
     justify-content: center;
     image-rendering: pixelated;
     cursor: default;
+
+    background-color: rgb(255, 255, 255); /* Debe ser semitransparente */
+    backdrop-filter: blur(0px) hue-rotate(35deg);
+    -webkit-backdrop-filter: blur(0px) hue-rotate(230deg);
 }
 
 .CajaQuienEs {
@@ -48,11 +57,20 @@ body {
     align-items: center;
 }
 
+.CajaRegreso:active{
+    box-shadow: inset 0px 5px 10px #03218570;
+    font-size: 23px;
+}
+
 .CajaRegreso a {
     text-decoration: none;
     font-size: 23px;
     color: white;
     text-shadow: 0px 2px 0px #883912;
+}
+
+.CajaRegreso a:active {
+    font-size: 21px;
 }
 
 .Decoracion1 {

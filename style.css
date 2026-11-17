@@ -22,16 +22,16 @@ body {
 }
 
 .headerPrincipal {
+    background-image: url('src/img/Banner1\ -\ copia.png');
     width: 100%;
     text-align: center;
-    background-image: url('src/img/Banner1\ -\ copia.png');
     background-size: cover;
     background-position: center;
     height: 150px;
     border-radius: 27px 27px 0px 0px;
     border-top:3px solid rgb(255, 255, 255);
-    border-left:3px solid rgb(235, 222, 222);
-    border-right:3px solid rgb(223, 151, 151);
+    border-left:3px solid #ebdede;
+    border-right:3px solid #ebdede;
 }
 
 .navPrincipal{
@@ -42,6 +42,12 @@ body {
     height: 50px;
     background: linear-gradient(to bottom, #ff9640,#db3b3b );
     border:3px solid #ff9640;
+
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #ff9640, #db3b3b) padding-box,
+        linear-gradient(to bottom, #ffebaa 0%, #ff9640 50%, #c23d1c 100%) border-box;
 }
 
 .navPrincipal ul, li{
@@ -65,8 +71,9 @@ body {
 .aside-izquierdo, .aside-derecho {
     display: flex;
     flex-direction: column;
-    padding-right: 7px;
-    padding-left: 7px;
+    padding-right: 17px;
+    filter: drop-shadow(0px 5px 0px #134999);
+    padding-left: 17px;
 }
 
 .BotonStartR, .BotonMedium, .BotonEndR, .BotonStartL, .BotonEndL {
@@ -74,15 +81,32 @@ body {
     padding: 13px;
     border-radius: 5px;
     text-align: center;
-    background: linear-gradient(to bottom, #40ff4a,#3bbbdb);
-    border: 3px solid #40ff4a;
-    border-bottom: 3px solid #2170b1;
     appearance: none;
+
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #40ff4a, #3bbbdb) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
 }
 
 .BotonStartR:hover, .BotonMedium:hover, .BotonEndR:hover, .BotonStartL:hover, .BotonEndL:hover {
-    background: linear-gradient(to bottom, #a9fb86,#5cf4ef);
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #a9fb86, #5cf4ef) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
     transform: scale(1.05);
+    cursor: pointer;
+}
+
+.BotonStartR:active, .BotonMedium:active, .BotonEndR:active, .BotonStartL:active, .BotonEndL:active {
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #a9fb86, #5cf4ef) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
+    transform: scale(0.99);
     cursor: pointer;
 }
 
@@ -106,15 +130,21 @@ body {
 
 option {
     background-color: #d0db3b;
-    color: #db3b3b;;
+    color: #db3b3b;
+    
 }
 
 .mainPrincipal {
-    background: linear-gradient(to bottom, #9b91f7,#583bdb );
-    border: 3px solid #9b91f7;
     border-radius: 10px;
     padding: 17px;
+    color: white;
+    text-shadow: 0px 2px 2px black;
     box-shadow: 0px 5px 5px 0px #1d097565;
+
+    border: 3px solid transparent;
+    background: 
+        linear-gradient(to bottom, #9b91f7, #583bdb) padding-box,
+        linear-gradient(to bottom, #dde4ff 0%, #9b91f7 50%, #3129a5 100%) border-box;
 }
 
 .mainPrincipal section header{
@@ -124,12 +154,12 @@ option {
 .cajaMain {
     display: grid;
     grid-template-columns: minmax(120px, 1fr) minmax(0, 3fr) minmax(120px, 1fr);
-    gap: 10px;
     align-items: start;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     max-width: 1600px;
+    box-shadow: inset 0px 5px 11px #850a0ac0;
     border-left: 3px solid #f7e891;
     border-right: 3px solid #f7e891;
     background: linear-gradient(to bottom, #f7e891,#d0db3b );
@@ -143,13 +173,14 @@ option {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0px 0px 30px 30px;
+    box-shadow: 0px -5px 11px #05266379;
 
-     border: 3px solid transparent;
+    border: 3px solid transparent;
 
   /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
     background: 
         linear-gradient(to bottom, #ff9640, #db3b3b) padding-box,
-        linear-gradient(to bottom, #ffebaa 0%, #ff9640 25%) border-box;
+        linear-gradient(to bottom, #ffebaa 0%, #ff9640 25%, #9e0e0e 100%) border-box;
 }
 
 .footerPrincipal a{
