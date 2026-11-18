@@ -6,6 +6,7 @@
     <title> Inicio | El Dibujos Web</title>
     <link rel="icon" href="src/img/Logo00.gif" type="icon">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--caja Principal-->
@@ -24,30 +25,57 @@
         </nav>
         <div class="cajaMain">
             <aside class="aside-izquierdo">
-                <select class="BotonStartL" onchange="window.location.href = this.value;">
-                        <option disabled selected hidden>CatShow!</option>
-                        <option value="Catshow/CatHouse.html">CatHouse</option>
-                        <option value=".html">Detras de Cortinas</option>
-                        <option value="Catshow/Museo-Felino.html">Museo Felino</option>
-                </select>
-                <select class="BotonMedium" onchange="window.location.href = this.value;">
-                        <option disabled selected hidden>La Prision</option>
-                        <option value=".html">Conoce al Equipo!</option>
-                        <option value=".html">Prision Serie</option>
-                        <option class="opcioncentral" value=".html">Proyectos en Equipo</option>
-                </select>
-                <select class="BotonMedium" onchange="window.location.href = this.value;">
-                        <option disabled selected hidden>El Dibujos</option>
-                        <option value=".html">Como Nacio?</option>
-                        <option value=".html">Detras de Escena</option>
-                        <option value=".html">Habitacion</option>
-                </select>
-                <select class="BotonEndL" onchange="window.location.href = this.value;">
-                        <option disabled selected hidden>Proyectos Externos</option>
-                        <option value="https://ccreativebboy-source.github.io/PanseiSoftShop/">Pansei Soft Shop</option>
-                        <option value="https://ccreativebboy-source.github.io/REPORTES_REBORN/">Reportes SIP</option>
-                        <option value=".html">MimiLand</option>
-                </select>
+                <!-- Botón 1 -->
+                <div class="custom-select-container">
+                  <button type="button" class="BotonStartL">
+                    <span class="selected-text">CatShow!</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="1" data-url="Catshow/CatHouse.html" class="custom-select-option opt-1">CatHouse</li>
+                    <li data-value="2" data-url=".html" class="custom-select-option opt-1">Detras de Cortinas</li>
+                    <li data-value="3" data-url="Catshow/Museo-Felino.html" class="custom-select-option opt-1">Museo Felino</li>
+                  </ul>
+                </div>
+
+                <!-- Botón 2 -->
+                <div class="custom-select-container">
+                  <button type="button" class="BotonMedium">
+                    <span class="selected-text">La Prision</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url=".html" class="custom-select-option opt-1">Conoce al Equipo!</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">Prision Serie</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">Proyectos en Equipo</li>
+                  </ul>
+                </div>
+
+                <!-- Botón 2 -->
+                <div class="custom-select-container">
+                  <button type="button" class="BotonMedium">
+                    <span class="selected-text">El Dibujos</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url=".html" class="custom-select-option opt-1">Como Nacio?</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">Detras de Escena</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">Habitacion</li>
+                  </ul>
+                </div>
+
+                <!-- Botón 3 -->
+                <div class="custom-select-container">
+                  <button type="button" class="BotonEndL">
+                    <span class="selected-text">Proyectos Externos</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url="https://ccreativebboy-source.github.io/PanseiSoftShop/" class="custom-select-option opt-1">Pansei Soft Shop</li>
+                    <li data-value="b" data-url="https://ccreativebboy-source.github.io/REPORTES_REBORN/" class="custom-select-option opt-1">Reportes SIP</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">MimiLand</li>
+                  </ul>
+                </div>
             </aside>
 
             <main class="mainPrincipal">
@@ -71,29 +99,53 @@
             </main>
 
             <aside class="aside-derecho">
-                <select class="BotonStartR" onchange="window.location.href = this.value;">
-                        <option value="" disabled selected hidden>Almacenes</option>
-                        <option value="https://archive.org/details/@00_00934">Internet Archive</option>
-                        <option value="https://www.youtube.com/@MyCreativeMind_">Canal Secundario</option>
-                </select>
-                <select class="BotonMedium" onchange="window.location.href = this.value;">
-                        <option value="" disabled selected hidden>Boton 1</option>
-                        <option value=".html">1</option>
-                        <option value=".html">2</option>
-                        <option value=".html">3</option>
-                </select>
-                <select class="BotonMedium" onchange="window.location.href = this.value;">
-                        <option value="" disabled selected hidden>Boton 1</option>
-                        <option value=".html">1</option>
-                        <option value=".html">2</option>
-                        <option value=".html">3</option>
-                </select>
-                <select class="BotonEndR" onchange="window.location.href = this.value;">
-                        <option value="" disabled selected hidden>Boton 1</option>
-                        <option value=".html">1</option>
-                        <option value=".html">2</option>
-                        <option value=".html">3</option>
-                </select>
+                <!-- Botón 1 -->
+                <div class="custom-select-container">
+                  <button type="button" class="BotonStartR">
+                    <span class="selected-text">Almacenes</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="1" data-url="https://archive.org/details/@00_00934" class="custom-select-option opt-1">Internet Archive</li>
+                    <li data-value="2" data-url="https://www.youtube.com/@MyCreativeMind_" class="custom-select-option opt-1">Canal Secundario</li>
+                  </ul>
+                </div>
+
+                <div class="custom-select-container">
+                  <button type="button" class="BotonMedium">
+                    <span class="selected-text">1</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url=".html" class="custom-select-option opt-1">1</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">2</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">3</li>
+                  </ul>
+                </div>
+
+                <div class="custom-select-container">
+                  <button type="button" class="BotonMedium">
+                    <span class="selected-text">1</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url=".html" class="custom-select-option opt-1">1</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">2</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">3</li>
+                  </ul>
+                </div>
+
+                <div class="custom-select-container">
+                  <button type="button" class="BotonEndR">
+                    <span class="selected-text">1</span>
+                  </button>
+
+                  <ul class="custom-select-menu">
+                    <li data-value="a" data-url=".html" class="custom-select-option opt-1">1</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">2</li>
+                    <li data-value="b" data-url=".html" class="custom-select-option opt-1">3</li>
+                  </ul>
+                </div>
             </aside>
         </div>
         <footer class="footerPrincipal">

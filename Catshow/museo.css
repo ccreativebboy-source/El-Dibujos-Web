@@ -28,16 +28,19 @@ html, body {
     background-image: url('src/img/BackgroundMuseo1.png');
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: 1;
     position: absolute;
     background-repeat: repeat-x;
-    background-position: left;
+    background-position: left bottom;
     pointer-events: none; /* Hace que los clics atraviesen la capa visual */
 }
 
 .regreso {
     position: relative;
     z-index: 10;
+}
+
+/* Ocultar scrollbar manteniéndolo funcional */
+::-webkit-scrollbar {
+    display: none;
 }

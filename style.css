@@ -71,22 +71,26 @@ body {
 .aside-izquierdo, .aside-derecho {
     display: flex;
     flex-direction: column;
-    padding-right: 17px;
+    align-items:center;
     filter: drop-shadow(0px 5px 0px #134999);
-    padding-left: 17px;
 }
 
 .BotonStartR, .BotonMedium, .BotonEndR, .BotonStartL, .BotonEndL {
     font-size: 18px;
     padding: 13px;
+    width:165px;
     border-radius: 5px;
     text-align: center;
     appearance: none;
 
+    outline: none;
+    border: none; /* O ajusta tu borde personalizado */
+    box-shadow: none;
+
     border: 3px solid transparent;
 
     background: 
-        linear-gradient(to bottom, #40ff4a, #3bbbdb) padding-box,
+        linear-gradient(to bottom, #9dff00, #3bbbdb) padding-box,
         linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
 }
 
@@ -94,11 +98,12 @@ body {
     border: 3px solid transparent;
 
     background: 
-        linear-gradient(to bottom, #a9fb86, #5cf4ef) padding-box,
+        linear-gradient(to bottom, #87ff54, #03afa9) padding-box,
         linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
     transform: scale(1.05);
     cursor: pointer;
 }
+
 
 .BotonStartR:active, .BotonMedium:active, .BotonEndR:active, .BotonStartL:active, .BotonEndL:active {
     border: 3px solid transparent;
@@ -122,16 +127,12 @@ body {
     border-radius: 5px 30px 5px 5px;
     text-align-last: center;
     text-align: center;
+    width:165px;
 }
 
 .BotonEndL {
     border-radius: 5px 5px 5px 30px;
-}
-
-option {
-    background-color: #d0db3b;
-    color: #db3b3b;
-    
+    width:165px;
 }
 
 .mainPrincipal {
@@ -193,4 +194,65 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.custom-select-container {
+  position: relative;
+  
+  user-select: none;
+  font-family: sans-serif;
+}
+
+/* Lista desplegable */
+.custom-select-menu {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0 0;
+  padding: 0;
+  list-style: none;
+  border: 3px solid #134999;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none; /* Oculto por defecto */
+  z-index: 100;
+
+  border: 3px solid transparent;
+
+  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
+    background: 
+        linear-gradient(to bottom, #ffb340, #db703b) padding-box,
+        linear-gradient(to bottom, #ffebaa 0%, #ffb340 25%, #db703b 100%) border-box;
+}
+
+.custom-select-menu.abierto {
+  display: block;
+}
+
+/* Opciones individuales */
+.custom-select-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.opt-1 { color: #1d4ed8; }
+
+/* Efecto al pasar el mouse (Hover) */
+.custom-select-option:hover {
+  border: 3px solid transparent;
+  color: #401212;
+  border-radius: 10px 10px 10px 10px;
+
+  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
+    background: 
+        linear-gradient(to bottom, #fff940, #db983b) padding-box,
+        linear-gradient(to bottom, rgb(255, 245, 212) 0%, #fff940 25%, #db983b 100%) border-box;
 }
