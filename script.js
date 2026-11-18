@@ -1,11 +1,12 @@
+// Interactividad de Boton Hamburguesa
 document.addEventListener('DOMContentLoaded', () => {
-  const todosLosSelects = document.querySelectorAll('.custom-select-container');
+  const todosLosSelects = document.querySelectorAll('.ContenedorSelect');
 
   todosLosSelects.forEach(contenedor => {
     const btn = contenedor.querySelector('button');
-    const menu = contenedor.querySelector('.custom-select-menu');
-    const selectedText = contenedor.querySelector('.selected-text');
-    const options = contenedor.querySelectorAll('.custom-select-option');
+    const menu = contenedor.querySelector('.selectMenu');
+    const selectedText = contenedor.querySelector('.selecText');
+    const options = contenedor.querySelectorAll('.optionSelect');
 
     // Abrir/cerrar este menú específico
     btn.addEventListener('click', (e) => {
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Cierra cualquier otro menú abierto
       todosLosSelects.forEach(otro => {
         if (otro !== contenedor) {
-          otro.querySelector('.custom-select-menu').classList.remove('abierto');
+          otro.querySelector('.selectMenu').classList.remove('abierto');
         }
       });
 
@@ -39,8 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cerrar todos los menús al hacer clic afuera
   window.addEventListener('click', () => {
     todosLosSelects.forEach(contenedor => {
-      const menu = contenedor.querySelector('.custom-select-menu');
+      const menu = contenedor.querySelector('.selectMenu');
       if (menu) menu.classList.remove('abierto');
+    });
+  });
+});
+
+// Misma Interactividad pero con un boton (Buzon.html)
+document.addEventListener('DOMContentLoaded', () => {
+  const botonesProyectos = document.querySelectorAll(".cajaProyectos .linkProyecto");
+
+  botonesProyectos.forEach(linkbtn => {
+    linkbtn.addEventListener('click', () => {
+      const url = linkbtn.getAttribute('data-url');
+      if (url) {
+        // Abre el enlace en una pestaña nueva (ideal para YouTube)
+        window.open(url, '_blank');
+        
+        // O si prefieres que se abra en la misma pestaña, descomenta la línea de abajo y comenta la de arriba:
+        // window.location.href = url;
+      }
     });
   });
 });

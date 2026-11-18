@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-image: url('src/img/background2.png');
+    background-image: url('../src/img/background2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

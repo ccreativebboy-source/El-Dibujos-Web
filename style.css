@@ -22,16 +22,18 @@ body {
 }
 
 .headerPrincipal {
-    background-image: url('src/img/Banner1\ -\ copia.png');
+    height: 150px;
+    border-radius: 27px 27px 0px 0px;
+
+    border: 3px solid transparent;
+    border-bottom: none;
+    background: 
+        url('src/img/Banner1\ -\ copia.png') padding-box,
+        linear-gradient(to bottom, #ffffff 0%, #eddede 50%, #ecc0c0 100%) border-box;
     width: 100%;
     text-align: center;
     background-size: cover;
     background-position: center;
-    height: 150px;
-    border-radius: 27px 27px 0px 0px;
-    border-top:3px solid rgb(255, 255, 255);
-    border-left:3px solid #ebdede;
-    border-right:3px solid #ebdede;
 }
 
 .navPrincipal{
@@ -148,6 +150,67 @@ body {
         linear-gradient(to bottom, #dde4ff 0%, #9b91f7 50%, #3129a5 100%) border-box;
 }
 
+.ContenedorSelect {
+  position: relative;
+  
+  user-select: none;
+  font-family: sans-serif;
+}
+
+/* Lista desplegable */
+.selectMenu {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0 0;
+  padding: 0;
+  list-style: none;
+  border: 3px solid #134999;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none; /* Oculto por defecto */
+  z-index: 100;
+
+  border: 3px solid transparent;
+
+  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
+    background: 
+        linear-gradient(to bottom, #ffb340, #db703b) padding-box,
+        linear-gradient(to bottom, #ffebaa 0%, #ffb340 25%, #db703b 100%) border-box;
+}
+
+.selectMenu.abierto {
+  display: block;
+}
+
+/* Opciones individuales */
+.optionSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.opt-1 { color: #1d4ed8; }
+
+/* Efecto al pasar el mouse (Hover) */
+.optionSelect:hover {
+  border: 3px solid transparent;
+  color: #401212;
+  border-radius: 10px 10px 10px 10px;
+
+  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
+    background: 
+        linear-gradient(to bottom, #fff940, #db983b) padding-box,
+        linear-gradient(to bottom, rgb(255, 245, 212) 0%, #fff940 25%, #db983b 100%) border-box;
+}
+
 .mainPrincipal section header{
     margin-bottom: 10px;
 }
@@ -196,63 +259,7 @@ body {
     background-attachment: fixed;
 }
 
-.custom-select-container {
-  position: relative;
-  
-  user-select: none;
-  font-family: sans-serif;
-}
-
-/* Lista desplegable */
-.custom-select-menu {
-  position: absolute;
-  top: 90%;
-  left: 0;
-  right: 0;
-  margin: 4px 0 0 0;
-  padding: 0;
-  list-style: none;
-  border: 3px solid #134999;
-  border-radius: 8px;
-  overflow: hidden;
-  display: none; /* Oculto por defecto */
-  z-index: 100;
-
-  border: 3px solid transparent;
-
-  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
-    background: 
-        linear-gradient(to bottom, #ffb340, #db703b) padding-box,
-        linear-gradient(to bottom, #ffebaa 0%, #ffb340 25%, #db703b 100%) border-box;
-}
-
-.custom-select-menu.abierto {
-  display: block;
-}
-
-/* Opciones individuales */
-.custom-select-option {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 16px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.15s, color 0.15s;
-}
-
-.opt-1 { color: #1d4ed8; }
-
-/* Efecto al pasar el mouse (Hover) */
-.custom-select-option:hover {
-  border: 3px solid transparent;
-  color: #401212;
-  border-radius: 10px 10px 10px 10px;
-
-  /* 3. Dos fondos: el primero es tu relleno y el segundo es el degradado del borde */
-    background: 
-        linear-gradient(to bottom, #fff940, #db983b) padding-box,
-        linear-gradient(to bottom, rgb(255, 245, 212) 0%, #fff940 25%, #db983b 100%) border-box;
+/* Ocultar scrollbar manteniéndolo funcional */
+::-webkit-scrollbar {
+    display: none;
 }

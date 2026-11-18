@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:cursive;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('../src/img/background4.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: grid;
+    place-items: center;
+    image-rendering: pixelated;
+    cursor: default;
+}
+
+.enlace-imagen {
+  display: inline-block; /* Ajusta el tamaño del enlace exactamente al de la imagen */
+  line-height: 0; /* Elimina el pequeño espacio inferior fantasma de las imágenes */
+}
+
+.enlace-imagen img {
+  display: block;
+  width: 100%; /* Opcional: si quieres que se adapte a un contenedor */
+  height: auto;
+}
+
+main {
+    display: flex;
+    align-items: flex-end; /* Alinea todos los elementos por la base (el suelo) */
+    justify-content: center;
+    gap: 30px; /* Separa el auto, la casa y el buzón sin que se toquen */
+}
+
+.buzon {
+    z-index: 1;
+    top: -245px;
+    position: absolute;
+    transform: translate(-670px, 458px);
+    background-repeat: repeat-x;
+}
+
+.buzon:hover {
+    filter: drop-shadow(0px 0px 5px #ffffbc) brightness(1.2);
+}
+
+.cajaProyectos {
+    transform: scale(1.1);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 15px;
+    filter: drop-shadow(0px 10px 3px rgba(0, 0, 0, 0.459));
+}
+
+.linkProyecto {
+    font-size: 40px;
+    padding: 13px;
+    width:320px;
+    border-radius: 5px;
+    text-align: center;
+    appearance: none;
+
+    outline: none;
+    border: none; /* O ajusta tu borde personalizado */
+    box-shadow: none;
+
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #9dff00, #3bbbdb) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
+}
+
+.linkProyecto:hover {
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #87ff54, #03afa9) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.linkProyecto:active {
+    border: 4px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #a9fb86, #5cf4ef) padding-box,
+        linear-gradient(to bottom, #e9ffc5 0%, #40ff4a 50%, #2c82c9 100%) border-box;
+    transform: scale(0.99);
+    cursor: pointer;
+    box-shadow: inset 0px 5px 5px black;
+}
