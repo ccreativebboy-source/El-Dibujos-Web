@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 // Misma Interactividad pero con un boton (Buzon.html)
 document.addEventListener('DOMContentLoaded', () => {
   const botonesProyectos = document.querySelectorAll(".cajaProyectos .linkProyecto");
@@ -56,6 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (url) {
         // Abre el enlace en una pestaña nueva (ideal para YouTube)
         window.open(url, '_blank');
+        
+        // O si prefieres que se abra en la misma pestaña, descomenta la línea de abajo y comenta la de arriba:
+        // window.location.href = url;
+      }
+    });
+  });
+});
+
+// Para (Seccion Index.html)
+document.addEventListener('DOMContentLoaded', () => {
+  const botonesRegreso = document.querySelectorAll(".cajaHeader .CajaRegreso");
+
+  botonesRegreso.forEach(linkbtn => {
+    linkbtn.addEventListener('click', () => {
+      const url = linkbtn.getAttribute('data-url');
+      if (url) {
+        // Abre el enlace en una pestaña nueva (ideal para YouTube)
+        window.location.href = url;
         
         // O si prefieres que se abra en la misma pestaña, descomenta la línea de abajo y comenta la de arriba:
         // window.location.href = url;

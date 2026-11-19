@@ -43,18 +43,23 @@ body {
 }
 
 .CajaRegreso {
-    border-left: 3px solid #cce5fa ;
-    border-right: 3px solid #cce5fa ;
-    background: linear-gradient(to bottom, #cce5fa,#5a92b4);
     height: 50px;
     border-radius: 25px 10px 0px 00px;
     position: relative;
     z-index: 2;
+    font-size: 23px;
+    color: white;
     right: 2px;
     width: 145px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 0px 2px 0px #02063a;
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #cce5fa, #5a92b4) padding-box,
+        linear-gradient(to bottom, #f0f8ff 0%, #cce5fa 50%, rgb(26, 91, 145) 100%) border-box;
     
 }
 
