@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    image-rendering: pixelated;
+    background-image: url('../src/background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.cajaprincipal {
+    background-color: #cce5fa54;
+    width: 1250px;
+    border: 2px solid white;
+}
+
+.btnRegreso {
+    height: 50px;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    z-index: 2;
+    font-size: 23px;
+    color: white;
+    right: 2px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 2px 0px #02063a;
+    border: 3px solid transparent;
+
+    background: 
+        linear-gradient(to bottom, #cce5fa, #5a92b4) padding-box,
+        linear-gradient(to bottom, #f0f8ff 0%, #cce5fa 50%, rgb(26, 91, 145) 100%) border-box;
+    
+}
+
+header {
+    padding-top: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+marquee img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section {
+    padding:15px;
+}
+
+.parrafo1 {
+    border-bottom: 2px solid white;
+}
+
+.parrafo1 nav {
+    margin-bottom: 15px;
+}
+
+.catalogoJuegos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 3px solid #cce5fa;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.juego img {
+    display: block;
+    width: 200px;
+}
+
+.juego footer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #cce5fa, #5a92b4);
+    overflow-wrap: break-word;
+}
