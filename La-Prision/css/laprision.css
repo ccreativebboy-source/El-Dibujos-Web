@@ -16,18 +16,26 @@ body {
     margin: 0;
 }
 
+p {
+    font-size: 25px;
+}
+
 .cajaprincipal {
-    background-color: #cce5fa54;
+    background: linear-gradient(to bottom, #cce5fa7c, #5a92b485);
     width: 1250px;
     border: 2px solid white;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
 }
 
 .btnRegreso {
     height: 50px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 30px 30px 0px 0px;
     position: relative;
     z-index: 2;
     font-size: 23px;
+    background: linear-gradient(to bottom, #cce5fa, #5a92b4);
+    cursor: pointer;
     color: white;
     right: 2px;
     width: 145px;
@@ -35,19 +43,15 @@ body {
     justify-content: center;
     align-items: center;
     text-shadow: 0px 2px 0px #02063a;
-    border: 3px solid transparent;
-
-    background: 
-        linear-gradient(to bottom, #cce5fa, #5a92b4) padding-box,
-        linear-gradient(to bottom, #f0f8ff 0%, #cce5fa 50%, rgb(26, 91, 145) 100%) border-box;
+    border: 3px solid white;
     
 }
 
 header {
-    padding-top: 10px;
+    padding-top: 20px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 marquee img {
@@ -64,13 +68,10 @@ main section {
     border-bottom: 2px solid white;
 }
 
-.parrafo1 nav {
-    margin-bottom: 15px;
-}
-
 .catalogoJuegos {
     display: flex;
     flex-wrap: wrap;
+    margin: 15px;
     align-items: stretch;
     justify-content: center;
     gap: 10px;
@@ -86,12 +87,30 @@ main section {
     border-radius: 5px;
     text-align: center;
     overflow: hidden;
+    transition:0.1s;
+}
+
+.juego:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px #02063a;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .juego img {
     display: block;
     width: 200px;
 }
+
+.juego:active {
+    transform: scale(1.1);
+}
+
+.juego a:active {
+    filter:drop-shadow( 0px 0px 10px rgb(255, 255, 255));
+}
+
 
 .juego footer {
     flex: 1;
@@ -102,4 +121,47 @@ main section {
     padding: 10px;
     background: linear-gradient(to bottom, #cce5fa, #5a92b4);
     overflow-wrap: break-word;
+}
+
+.titulo2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+}
+
+.seccionTemporada {
+    display: flex;
+    justify-content: center;
+}
+
+.seccionTemporada a {
+    text-decoration: none;
+    height: 50px;
+    font-size: 23px;
+    background: linear-gradient(to bottom, #cce5fa, #5a92b4);
+    cursor: pointer;
+    color: white;
+    right: 2px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 30px 30px;
+    align-items: center;
+    text-shadow: 0px 2px 0px #02063a;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transition:0.1s;
+}
+
+.seccionTemporada a:hover {
+    background-image: url("../src/Aniwars.png");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition:0.1s;
+}
+
+.seccionTemporada a:active {
+    height: 40px;
+    transition:0.1s;
 }
