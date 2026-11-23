@@ -38,6 +38,8 @@ html, body {
     background-repeat: repeat-x;
     background-position: left bottom;
     pointer-events: none; /* Hace que los clics atraviesen la capa visual */
+    top: 0;
+    bottom: 0 ;
 }
 
 .regreso {
@@ -83,6 +85,14 @@ html, body {
 }
 
 .cuadro img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.cuadro video {
     max-width: 100%;
     max-height: 100%;
     height: auto;
