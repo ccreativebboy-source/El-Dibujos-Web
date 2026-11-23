@@ -131,3 +131,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     actualizarHielo();
 });
+
+//mirar pintura a detalle
+// --- VISOR DE PINTURA EN EL CENTRO ---
+    const visor = document.createElement("div");
+    visor.className = "visor-obra";
+    visor.innerHTML = `
+        <button class="visor-cerrar" type="button" aria-label="Cerrar">✕ Cerrar</button>
+        <div class="visor-contenido">
+            <img src="" alt="">
+            <p class="visor-titulo"></p>
+        </div>
+    `;
+    document.body.appendChild(visor);
+
+    const visorImg = visor.querySelector("img");
+    const visorTitulo = visor.querySelector(".visor-titulo");
+    const btnCerrar = visor.querySelector(".visor-cerrar");
+
+    function abrirVisor(imgElement) {
+        visorImg.src = imgElement.src;
+        visorImg.alt = imgElement.alt || "Obra del museo";
+        visorTitulo.textContent = imgElement.alt || "";
+        visorTitulo.style.display = imgElement.alt ? "block" : "none";
+        visor.classList.add("activo");
+    }
+
+    function cerrarVisor() {
+        visor.classList.remove("activo");
+    }
+
+    // Abre al hacer clic en cualquier imagen dentro de .Pinturas
+    document.querySelectorAll(".Pinturas img").forEach((img) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", (e) => {
+            e.stopPropagation();
+            abrirVisor(img);
+        });
+    });
+
+    // Cierra al hacer clic en el botón, en el fondo oscuro o con la tecla Escape
+    btnCerrar.addEventListener("click", cerrarVisor);
+    visor.addEventListener("click", (e) => {
+        if (e.target === visor) cerrarVisor();
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && visor.classList.contains("activo")) {
+            cerrarVisor();
+        }
+    });
