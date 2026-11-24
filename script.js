@@ -117,3 +117,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Para (Seccion Mimiland.html)
+document.addEventListener('DOMContentLoaded', () => {
+  const botonesRegreso = document.querySelectorAll(".cajaPrincipal .btnRegreso");
+
+  botonesRegreso.forEach(linkbtn => {
+    linkbtn.addEventListener('click', () => {
+      const url = linkbtn.getAttribute('data-url');
+      if (url) {
+        // Abre el enlace en una pestaña nueva (ideal para YouTube)
+        window.location.href = url;
+        
+        // O si prefieres que se abra en la misma pestaña, descomenta la línea de abajo y comenta la de arriba:
+        // window.location.href = url;
+      }
+    });
+  });
+});
