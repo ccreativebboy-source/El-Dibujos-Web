@@ -159,7 +159,8 @@ html, body {
     object-fit: contain;
     border: 8px solid #3d2314;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
-    background-color: #141414;
+    background-size: cover ;
+    
 }
 
 .visor-titulo {

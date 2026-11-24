@@ -11,7 +11,7 @@ document.addEventListener("wheel", function (event) {
     }
 }, { passive: false });
 
-// pinturas
+// Pinturas
 document.addEventListener("DOMContentLoaded", () => {
     const cuadros = document.querySelectorAll(".Pinturas .cuadro");
 
@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const ajustarTamano = () => {
             const ratio = img.naturalWidth / img.naturalHeight;
 
-            if (ratio > 1.45) {
+            if (ratio > 2.00) {
                 // Imagen horizontal: ocupa 2 columnas
                 cuadro.classList.add("ancha");
-            } else if (ratio < 0.65) {
+            } else if (ratio < 0.90) {
                 // Imagen vertical larga: ocupa 2 filas
                 cuadro.classList.add("alta");
             }
