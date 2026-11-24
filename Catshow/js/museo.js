@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Abre al hacer clic en cualquier imagen dentro de .Pinturas
     document.querySelectorAll(".Pinturas img").forEach((img) => {
-        img.style.cursor = "zoom-in";
+        img.style.cursor = "pointer";
         img.addEventListener("click", (e) => {
             e.stopPropagation();
             abrirVisor(img);
