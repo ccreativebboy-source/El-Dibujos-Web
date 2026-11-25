@@ -149,7 +149,7 @@ body {
     border-radius: 10px;
     padding: 17px;
     color: white;
-    text-shadow: 0px 2px 2px black;
+    text-shadow: 0px 1px 1px black;
     box-shadow: 0px 5px 5px 0px #1d097565;
 
     border: 3px solid transparent;
@@ -272,4 +272,16 @@ body {
 /* Ocultar scrollbar manteniéndolo funcional */
 ::-webkit-scrollbar {
     display: none;
+}
+
+.InfoWeb {
+    box-shadow: inset 0px 5px 10px #0f0444;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #482eba;
+}
+
+hr {
+    border: 1px solid #9b91f7;
 }
