@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+
+body {
+    background-color: #CFF3F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaImg {
+    background: url("../img/caja.png");
+    background-size: cover;
+    transform: scale(0.8);
+    filter:drop-shadow(0px 2px 0px rgb(14, 87, 156));
+    width: 1103px;
+    height: 788px;
+}

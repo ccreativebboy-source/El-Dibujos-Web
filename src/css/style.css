@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family:cursive;
+    font-family: 'MiComicSans', sans-serif;
     
 }
 
@@ -11,11 +11,11 @@
 
 
 @font-face {
-  font-family: "MiFuente";
-  src: url("ComicSans.ttf") format("woff2"),
-       url("ComicSans.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'MiComicSans';
+    src: url('../fonts/ComicSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
     border: 3px solid transparent;
     border-bottom: none;
     background: 
-        url('src/img/Banner1\ -\ copia.png') padding-box,
+        url('../img/Banner1\ -\ copia.png') padding-box,
         linear-gradient(to bottom, #ffffff 0%, #eddede 50%, #ecc0c0 100%) border-box;
     width: 100%;
     text-align: center;
@@ -66,9 +66,17 @@ body {
         linear-gradient(to bottom, #ffebaa 0%, #ff9640 50%, #c23d1c 100%) border-box;
 }
 
-.navPrincipal ul, li{
+.navPrincipal ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
+    list-style: none;
+}
+
+/* Evita que los elementos de las listas del contenido hereden el flex del menú */
+.cajaMain li {
+    display: list-item;
 }
 
 .enlaces{
@@ -269,7 +277,7 @@ body {
 }
 
 body {
-    background-image: url('src/img/background.gif');
+    background-image: url('../img/background.gif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -288,6 +296,246 @@ body {
     background-color: #482eba;
 }
 
+ol li {
+    list-style-type: none;
+}
+
 hr {
     border: 1px solid #9b91f7;
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVE
+   Mantiene el diseño original y adapta la distribución
+   a tablets y celulares.
+   ===================================================== */
+
+/* Evita que imágenes y elementos anchos fuercen el tamaño de la página */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.CajaIndex {
+    min-width: 0;
+}
+
+.mainPrincipal {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* TABLETS Y PANTALLAS MEDIANAS */
+@media (max-width: 1000px) {
+    .CajaIndex {
+        width: calc(100% - 32px);
+        margin: 16px;
+    }
+
+    .cajaMain {
+        grid-template-columns: minmax(125px, 1fr) minmax(0, 3fr) minmax(125px, 1fr);
+    }
+
+    .navPrincipal ul {
+        gap: clamp(12px, 3vw, 35px);
+    }
+
+    .enlaces,
+    .footerPrincipal a {
+        font-size: clamp(15px, 2vw, 19px);
+    }
+}
+
+/* TABLETS ESTRECHAS */
+@media (max-width: 800px) {
+    .CajaIndex {
+        width: calc(100% - 24px);
+        margin: 12px;
+    }
+
+    .headerPrincipal {
+        height: 125px;
+    }
+
+    .cajaMain {
+        grid-template-columns: minmax(105px, 0.9fr) minmax(0, 3fr) minmax(105px, 0.9fr);
+    }
+
+    .BotonStartR,
+    .BotonMedium,
+    .BotonEndR,
+    .BotonStartL,
+    .BotonEndL {
+        width: 100%;
+        max-width: 145px;
+        padding: 10px 6px;
+        font-size: 15px;
+    }
+
+    .navPrincipal {
+        min-height: 50px;
+        height: auto;
+        padding: 8px;
+    }
+
+    .navPrincipal ul {
+        flex-wrap: wrap;
+        gap: 8px 22px;
+    }
+
+    .footerPrincipal {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        padding: 12px;
+    }
+}
+
+/* CELULARES: laterales apilados alrededor del contenido */
+@media (max-width: 650px) {
+    body {
+        display: block;
+        background-attachment: scroll;
+    }
+
+    .CajaIndex {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        border-radius: 20px;
+    }
+
+    .headerPrincipal {
+        height: 105px;
+        border-radius: 17px 17px 0 0;
+        background-position: center;
+    }
+
+    .navPrincipal {
+        height: auto;
+        min-height: 0;
+        padding: 10px 8px;
+    }
+
+    .navPrincipal ul {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    .navPrincipal li {
+        display: block;
+    }
+
+    .navPrincipal .enlaces,
+    .footerPrincipal .enlaces {
+        font-size: 16px;
+    }
+
+    .cajaMain {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        padding: 14px 10px;
+        border-left-width: 2px;
+        border-right-width: 2px;
+    }
+
+    /* Orden: lateral izquierdo, contenido y lateral derecho */
+    .aside-izquierdo {
+        order: 0;
+        width: 100%;
+        gap: 8px;
+        filter: drop-shadow(0px 3px 0px #134999);
+    }
+
+    .mainPrincipal {
+        order: 1;
+        width: 100%;
+        padding: 14px;
+    }
+
+    .aside-derecho {
+        order: 2;
+        width: 100%;
+        gap: 8px;
+        filter: drop-shadow(0px 3px 0px #134999);
+    }
+
+    .ContenedorSelect,
+    .ContenedorSelect2 {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .BotonStartR,
+    .BotonMedium,
+    .BotonEndR,
+    .BotonStartL,
+    .BotonEndL {
+        width: 100%;
+        max-width: none;
+        min-height: 44px;
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    .mainPrincipal h1 {
+        font-size: clamp(21px, 6vw, 28px);
+        line-height: 1.2;
+    }
+
+    .mainPrincipal h2 {
+        font-size: clamp(19px, 5vw, 24px);
+    }
+
+    .mainPrincipal p,
+    .mainPrincipal li {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .mainPrincipal img {
+        max-width: 45%;
+        height: auto;
+    }
+
+    .InfoWeb {
+        padding: 12px;
+    }
+
+    .footerPrincipal {
+        justify-content: center;
+        gap: 10px 18px;
+        border-radius: 0 0 20px 20px;
+        padding: 14px 10px;
+    }
+}
+
+/* CELULARES MUY ESTRECHOS */
+@media (max-width: 380px) {
+    .CajaIndex {
+        width: calc(100% - 12px);
+        margin: 6px auto;
+    }
+
+    .headerPrincipal {
+        height: 85px;
+    }
+
+    .navPrincipal ul {
+        gap: 7px 12px;
+    }
+
+    .navPrincipal .enlaces,
+    .footerPrincipal .enlaces {
+        font-size: 14px;
+    }
+
+    .mainPrincipal {
+        padding: 11px;
+    }
+
+    .mainPrincipal p,
+    .mainPrincipal li {
+        font-size: 14px;
+    }
 }

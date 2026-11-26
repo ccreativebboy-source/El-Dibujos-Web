@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-image: url('src/img/background.gif');
+    background-image: url('../img/background.gif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

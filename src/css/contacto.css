@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-image: url('src/img/background.gif');
+    background-image: url('../img/background.gif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -35,6 +35,7 @@ body {
     margin: 70px;
     border-radius: 30px 30px 30px 30px;
     width: 535px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.527));
 }
 
 .cajaHeader {
@@ -50,6 +51,7 @@ body {
     font-size: 23px;
     color: white;
     right: 2px;
+    height: 44px;
     width: 145px;
     display: flex;
     justify-content: center;
@@ -108,8 +110,6 @@ body {
     border: 3px solid #f5f6f8 ;
     background: linear-gradient(to bottom, #f5f6f8,#E0E7FF );
     border-radius: 0px 30px 30px 30px;
-
-    box-shadow: 0px 10px 10px #00000070;
 }
 
 .CajaEnlaces {
