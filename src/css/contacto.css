@@ -1,7 +1,21 @@
+/* Fuente local del proyecto */
+@font-face {
+    font-family: 'MiComicSans';
+    src: url('../fonts/ComicSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Evita que padding y bordes aumenten inesperadamente el ancho */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family:cursive;
+    font-family: 'MiComicSans', cursive;
 }
 
 html, body {
@@ -51,7 +65,7 @@ body {
     font-size: 23px;
     color: white;
     right: 2px;
-    height: 44px;
+    height: 50px;
     width: 145px;
     display: flex;
     justify-content: center;
@@ -181,4 +195,145 @@ body {
 
 .direccion {
     display: flex;
+}
+
+/* ==============================
+   DISEÑO RESPONSIVE - CONTACTO
+   ============================== */
+
+/* Tablets */
+@media (max-width: 800px) {
+    .direccion {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .CajaContacto {
+        width: min(535px, 100%);
+        margin: 0;
+    }
+
+    .CajaMain {
+        width: 100%;
+    }
+
+    .CajaEnlaces {
+        transform: none;
+        padding: 17px 15px 30px;
+    }
+
+    .CajaLink {
+        width: min(400px, 100%);
+    }
+
+    .CajaImg {
+        margin-bottom: 0;
+    }
+
+    .CajaImg img {
+        width: min(180px, 25vw);
+        height: auto;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    body {
+        min-height: 100vh;
+        height: auto;
+        background-attachment: scroll;
+    }
+
+    .direccion {
+        flex-direction: column;
+        padding: 20px 14px;
+        gap: 16px;
+    }
+
+    .CajaContacto {
+        width: 100%;
+        max-width: 535px;
+    }
+
+    .cajaHeader {
+        min-height: 50px;
+    }
+
+    .CajaRegreso {
+        flex: 0 0 125px;
+        width: 125px;
+        right: 0;
+    }
+
+    .CajaRegreso a {
+        font-size: 20px;
+    }
+
+    .Decoracion1,
+    .Decoracion2 {
+        width: clamp(65px, 22vw, 150px);
+        margin-left: -15px;
+    }
+
+    .CajaMain {
+        width: 100%;
+        padding: 12px;
+        border-radius: 0 22px 22px 22px;
+    }
+
+    .CajaEnlaces {
+        width: 100%;
+        gap: 12px;
+        padding: 12px 4px 20px;
+    }
+
+    .CajaEnlaces h1 {
+        font-size: clamp(18px, 5vw, 22px);
+        text-align: center;
+        line-height: 1.25;
+    }
+
+    .CajaLink {
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        border-radius: 0 0 22px 22px;
+    }
+
+    .CajaLink a {
+        max-width: 100%;
+        padding: 12px 8px;
+        font-size: clamp(18px, 5.5vw, 25px);
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .CajaImg {
+        align-items: center;
+    }
+
+    .CajaImg img {
+        width: min(160px, 45vw);
+        height: auto;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 360px) {
+    .CajaEnlaces h1 {
+        font-size: 18px;
+    }
+
+    .CajaLink a {
+        font-size: 17px;
+    }
+
+    .CajaRegreso {
+        flex-basis: 112px;
+        width: 112px;
+    }
 }
